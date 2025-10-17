@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clube da Fábrica - Dia Feliz</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Ícones Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <!-- Fonte Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+    <div class="container-fluid">
+      
+      <!-- Logo + Texto -->
+      <a class="navbar-brand" href="#">
+        <img src="img/logo2_clube.png" alt="Logo">
+        <div class="brand-text">
+          <h6>Clube da Fábrica</h6>
+          <small>Sucos e Laticínios</small>
+        </div>
+      </a>
+
+      <!-- Botão Hamburguer (mobile) -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Conteúdo Navbar -->
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <!-- Links -->
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 ms-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Início</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Produtos</a>
+          </li>
+        </ul>
+
+        <!-- Search -->
+        <form id="searchForm" class="d-flex mx-auto position-relative search-box">
+          <i class="bi bi-search"></i>
+          <input id="searchInput" class="form-control" type="search" placeholder="Buscar produtos..." aria-label="Buscar">
+        </form>
+
+        <!-- Carrinho + Usuário -->
+        <div class="d-flex align-items-center gap-3 ms-3">
+          <svg xmlns= "http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart h-5 w-5">
+          <circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path></svg>
+          <div class="dropdown-user">
+            <button class="user-btn user-section" id="userDropdownBtn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user h-4 w-4">
+              <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            <span class="link-adm">Administrador</span>
+          </button>
+          <div class="dropdown-menu-user" id="userDropdownMenu">
+            <button class="dropdown-item-user">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-package mr-2 h-4 w-4">
+              <path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"></path><path d="M12 22V12"></path><path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7"></path><path d="m7.5 4.27 9 5.15"></path></svg>
+            <span class="link-adm">Administração</span>
+            </button>
+            <button class="dropdown-item-user">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-out mr-2 h-4 w-4">
+              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" x2="9" y1="12" y2="12"></line></svg>
+            <span class="link-adm">Sair</span>
+            </button>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <img src="img/logo_clube.png" alt="Logo" alt="Dia Feliz Logo"> 
+      <h1 class="display-4 fw-bold">Bem-vindo ao <span style="color: #0A1926;">Clube da Fábrica</span></h1>
+      <p class="lead mb-4">Distribuidora oficial das melhores marcas. <strong>Dia Feliz, Águas Prata, Edmel e Saboroso</strong>.  
+      <br>Sabor e qualidade direto da nossa fábrica para sua mesa.</p>
+
+      <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+        <a href="#produtos" class="btn-produto">
+          Ver Produtos <i class="bi bi-arrow-right ms-2"></i>
+        </a>
+        <a href="#registro" class="btn-criarconta">
+          Criar Conta
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card feature-card text-center p-4">
+            <div class="feature-icon bg-warning bg-opacity-25 text-warning">
+              <i class="bi bi-truck"></i>
+            </div>
+            <h5 class="fw-bold">Entrega Rápida</h5>
+            <p>Produtos frescos entregues com agilidade e cuidado</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card feature-card text-center p-4">
+            <div class="feature-icon bg-success bg-opacity-25 text-success">
+              <i class="bi bi-shield-check"></i>
+            </div>
+            <h5 class="fw-bold">Qualidade Garantida</h5>
+            <p>Produtos selecionados com o mais alto padrão de qualidade</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card feature-card text-center p-4">
+            <div class="feature-icon bg-danger bg-opacity-25 text-danger">
+              <i class="bi bi-heart-fill"></i>
+            </div>
+            <h5 class="fw-bold">Feito com Amor</h5>
+            <p>Cada produto é preparado com carinho e dedicação</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Produtos em Destaque -->
+  <section id="produtos" class="py-5 bg-light">
+    <div class="container text-center">
+      <span class="badge-prodDesc">
+        <i class="bi bi-star-fill me-2"></i>Produtos em Destaque
+      </span>
+      <h2 class="fw-bold mb-3">Nossos Mais Vendidos</h2>
+      <p class="text-muted mb-5">Experimente nossos produtos mais populares e descubra por que são os favoritos dos nossos clientes</p>
+
+      <div class="row g-4 mb-4">
+  <!-- Produto 1 -->
+  <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+    <div class="card h-100 shadow-sm p-2" style="border-radius: 16px;">
+      <div class="position-relative">
+        <img src="img/suco_laranja.png" class="card-img-top" alt="Suco de Laranja Natural" style="border-radius: 12px 12px 0 0;">
+        <span class="badge-prodDesc2" style="font-weight:600;"><i class="bi bi-star me-1"></i>Destaque</span>
+      </div>
+      <div class="card-body d-flex flex-column">
+        <span class="badge bg-light text-dark mb-2" style="font-size:0.85rem;">Sucos</span>
+        <h6 class="t-suco">Suco de Laranja Natural</h6>
+        <p class="texto-suco">Suco 100% natural extraído de laranjas selecionadas, rico em vitamina C.</p>
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-preco">R$ 8.99</span>
+          <span class="text-estoque">Estoque: 50</span>
+        </div>
+        <button class="btn-carrinho">
+          Adicionar ao Carrinho
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Produto 2 -->
+  <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+    <div class="card h-100 shadow-sm p-2" style="border-radius: 16px;">
+      <div class="position-relative">
+        <img src="img/suco_uva.png" class="card-img-top" alt="Suco de Uva Natural" style="border-radius: 12px 12px 0 0;">
+        <span class="badge-prodDesc2" style="font-weight:600;"><i class="bi bi-star me-1"></i>Destaque</span>
+      </div>
+      <div class="card-body d-flex flex-column">
+        <span class="badge bg-light text-dark mb-2" style="font-size:0.85rem;">Sucos</span>
+        <h6 class="t-suco">Suco de Uva Natural</h6>
+        <p class="texto-suco">Suco 100% natural extraído de uvas selecionadas, rico em vitamina C.</p>
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-preco">R$ 8.99</span>
+          <span class="text-estoque">Estoque: 50</span>
+        </div>
+        <button class="btn-carrinho">
+          Adicionar ao Carrinho
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Produto 3 -->
+  <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+    <div class="card h-100 shadow-sm p-2" style="border-radius: 16px;">
+      <div class="position-relative">
+        <img src="img/suco_morango.png" class="card-img-top" alt="Suco de Morango Natural" style="border-radius: 12px 12px 0 0;">
+        <span class="badge-prodDesc2" style="font-weight:600;"><i class="bi bi-star me-1"></i>Destaque</span>
+      </div>
+      <div class="card-body d-flex flex-column">
+        <span class="badge bg-light text-dark mb-2" style="font-size:0.85rem;">Sucos</span>
+        <h6 class="t-suco">Suco de Morango Natural</h6>
+        <p class="texto-suco">Suco 100% natural extraído de morangos selecionadas, rico em vitamina C.</p>
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-preco">R$ 8.99</span>
+          <span class="text-estoque">Estoque: 50</span>
+        </div>
+        <button class="btn-carrinho">
+          Adicionar ao Carrinho
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Produto 4 -->
+  <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+    <div class="card h-100 shadow-sm p-2" style="border-radius: 16px;">
+      <div class="position-relative">
+        <img src="img/suco_maracuja.png" class="card-img-top" alt="Suco de Maracujá Natural" style="border-radius: 12px 12px 0 0;">
+        <span class="badge-prodDesc2" style="font-weight:600;"><i class="bi bi-star me-1"></i>Destaque</span>
+      </div>
+      <div class="card-body d-flex flex-column">
+        <span class="badge bg-light text-dark mb-2" style="font-size:0.85rem;">Sucos</span>
+        <h6 class="t-suco">Suco de Maracujá Natural</h6>
+        <p class="texto-suco">Suco 100% natural extraído de maracujás selecionadas, rico em vitamina C.</p>
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-preco">R$ 8.99</span>
+          <span class="text-estoque">Estoque: 50</span>
+        </div>
+        <button class="btn-carrinho">
+              Adicionar ao Carrinho
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <a href="#produtos" class="btn-verprod">
+        Ver Todos os Produtos <i class="bi bi-arrow-right ms-2"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Brands Section -->
+<section class="brands-section">
+  <div class="container">
+    <div class="text-center mb-4">
+      <h2 class="fw-bold mb-3" style="font-size:2.2rem;">Nossas Marcas</h2>
+      <p class="text-muted" style="font-size:1.1rem;">
+        Trabalhamos com as melhores marcas do mercado para garantir qualidade e sabor
+      </p>
+    </div>
+    <div class="brands-grid">
+      <div class="brand-card">
+        <img src="img/logo_diafeliz.png" alt="Dia Feliz" />
+      </div>
+      <div class="brand-card">
+        <img src="img/logo-aguas-prata.png" alt="Águas Prata" />
+      </div>
+      <div class="brand-card">
+        <img src="img/logo-edmel.png" alt="Edmel" />
+      </div>
+      <div class="brand-card">
+        <img src="img/logo-saboroso.png" alt="Saboroso" />
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Categorias -->
+  <section class="py-5">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-3">Nossas Categorias</h2>
+      <p class="text-muted mb-5">Explore nossa seleção completa de sucos e laticínios</p>
+
+      <!-- Card Categoria Sucos -->
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card-categoria">
+            <div class="categoria-icone">🥤</div>
+            <h3 class="fw-bold">Sucos Naturais</h3>
+            <p class="text-muted">Sucos 100% naturais extraídos das melhores frutas selecionadas</p>
+            <a href="#" class="btn-expsucos">
+              Explorar Sucos <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card Categoria Laticínios -->
+        <div class="col-md-6">
+          <div class="card-categoria">
+            <div class="categoria-icone">🥛</div>
+            <h3 class="fw-bold">Laticínios Frescos</h3>
+            <p class="text-muted">Leites, iogurtes e queijos frescos direto do produtor</p>
+            <a href="#" class="btn-explaticinios">
+              Explorar Laticínios <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card Categoria Mel -->
+        <div class="col-md-6">
+          <div class="card-categoria">
+            <div class="categoria-icone">🍯</div>
+            <h3 class="fw-bold">Mel Puro</h3>
+            <p class="text-muted">Mel 100% natural, direto do produtor, sabor e qualidade garantidos</p>
+            <a href="#" class="btn-expmel">
+              Explorar Mel <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card Categoria Água -->
+         <div class="col-md-6">
+          <div class="card-categoria">
+            <div class="categoria-icone">💧</div>
+            <h3 class="fw-bold">Água Mineral</h3>
+            <p class="text-muted">Água mineral pura e refrescante, direto da fonte para você</p>
+            <a href="#" class="btn-expagua">
+              Explorar Água <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t bg-muted/30 mt-16">
+    <div class="container-footer">
+      <div class="container2-footer">
+        <div>
+          <div class="titulo-footer">
+            <img 
+              src="img/logo2_clube.png" 
+              alt="Clube da Fabrica" 
+              class="img-footer"
+            />
+            <span class="titulo-cf">Clube da Fábrica</span>
+          </div>
+          <p class="texto-diafeliz">
+            Distribuidora de sucos e laticínios da marca Dia Feliz. 
+            Produtos frescos e saborosos direto da fábrica.
+          </p>
+        </div>
+        
+        <div>
+          <h3 class="titulo-cf">Links Rápidos</h3>
+          <ul class="grupo-lista">
+            <li><a href="/" class="item-lista">Início</a></li>
+            <li><a href="/products" class="item-lista">Produtos</a></li>
+            <li><a href="/products?category=sucos" class="item-lista">Sucos</a></li>
+            <li><a href="/products?category=laticínios" class="item-lista">Laticínios</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="titulo-cf">Contato</h3>
+          <div class="lista-contato">
+            <p>📧 contato@clubedafabrica.com</p>
+            <p>📱 (11) 99999-9999</p>
+            <p>🕒 Segunda à Sexta: 8h às 18h</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2024 Clube da Fábrica. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Botão do Wpp -->
+  <a href="https://api.whatsapp.com/send?phone=SEUNUMERO&text=Ol%C3%A1%2C%20gostaria%20de%20falar%20sobre%20o%20Clube%20da%20F%C3%A1brica." target="_blank" class="whatsapp-float">
+    <div class="whatsapp-icon-wrapper">
+        <i class="bi bi-whatsapp"></i>
+    </div>
+    <span class="whatsapp-text">WhatsApp</span>
+</a>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
