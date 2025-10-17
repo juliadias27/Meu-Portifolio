@@ -1,0 +1,65 @@
+# 🏪 Clube da Fábrica - Projeto de E-commerce Full Stack
+
+Projeto de e-commerce Full Stack desenvolvido como trabalho interdisciplinar. A aplicação simula um sistema completo para a distribuidora "Clube da Fábrica", com uma vitrine de produtos para clientes e uma API backend para gerenciar os dados.
+
+<br>
+
+## ✨ Sobre o Projeto
+
+O objetivo foi criar uma solução de e-commerce completa, aplicando conhecimentos de **desenvolvimento frontend** para a interface do usuário e **desenvolvimento backend** para a lógica de negócios e persistência de dados. O projeto está sendo desenvolvido em grupo, simulando um ambiente de colaboração real.
+
+<br>
+
+## 🚀 Tecnologias Utilizadas
+
+Este projeto está sendo construído com uma arquitetura separada entre frontend e backend, utilizando as seguintes tecnologias:
+
+### **Backend**
+* **Linguagem:** Java 17 
+* **Framework:** Spring Boot
+* **Arquitetura:** API RESTful
+* **Banco de Dados:** SQL Server
+* **Dependências Principais:**
+    * Spring Web: Para criar os endpoints da API.
+    * Spring Data JPA: Para persistência de dados.
+    * Lombok: Para reduzir código boilerplate.
+    * MS SQL Server Driver
+
+### **Frontend**
+* **Estrutura:** HTML5, CSS3, JavaScript
+* **Framework CSS:** Bootstrap 5
+* **Comunicação com Backend:** Requisições HTTP (Fetch API/Axios) para consumir a API REST.
+
+<br>
+
+## 🏛️ Arquitetura do Backend
+
+O backend foi desenvolvido seguindo uma arquitetura de API REST. Ele expõe uma série de endpoints para que o frontend (ou qualquer outro cliente) possa consumir e manipular os dados da aplicação. As principais responsabilidades do backend são:
+
+* Gerenciar o cadastro e autenticação de usuários.
+* Controlar o catálogo de produtos (criar, ler, atualizar, deletar).
+* Processar pedidos e gerenciar o carrinho de compras.
+* Garantir a segurança e a integridade dos dados.
+
+<br>
+
+## 🎯 Funcionalidades Implementadas
+
+### **Frontend (Cliente)**
+* **Página Inicial:** Vitrine com produtos em destaque e categorias.
+* **Visualização de Produtos:** Listagem de produtos consumidos da API.
+* **Sistema de Login e Cadastro:** Páginas para registro e autenticação de usuários.
+* **Layout Responsivo:** Adaptação para diferentes tamanhos de tela.
+
+### **Backend (API)**
+* **Endpoint de Produtos:** Rotas para buscar, criar, editar e deletar produtos.
+* **Endpoint de Autenticação:** Rotas para registrar e logar usuários.
+* **Endpoint de Categorias:** Rotas para gerenciar as categorias de produtos.
+
+<br>
+
+
+## 👥 Equipe e Colaboradores
+
+* **Júlia Dias Mendes** 
+* **Maria Eduarda Zinatto de Siqueira**
